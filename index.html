@@ -1,1 +1,50 @@
-Hello, World!
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>termynal.js example</title>
+        <meta charset="utf-8">
+        <!-- include the termynal stylesheet -->
+        <link rel="stylesheet" href="termynal.css">
+        <!-- some custom styles for the page -->
+        <link href="https://fonts.googleapis.com/css?family=Fira+Mono">
+        <style>
+            body {
+                padding: 0; margin: 0;
+                background: #1a1e24;
+                width: 100%;
+                min-height: 100vh;
+                display: -webkit-box; display: -ms-flexbox; display: flex;
+                -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+                -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+                -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- the termynal container -->
+        <div id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="800">
+            <span data-ty="input" data-ty-prompt="~/dev/site # ">whoami</span>
+            <span data-ty>Keiron Pizzey</span>
+            <span data-ty="input" data-ty-prompt="~/dev/site # ">echo $EMAIL</span>
+            <span data-ty>hello@convoluted.ai</span>
+            <span data-ty="input" data-ty-prompt="~/dev/site # ">cat personal_details.txt | grep CAREER | awk -F= '{print $2}'</span>
+            <span data-ty>Senior Data Scientist and Tech Lead. Previously PhD in experimental atomic physics.</span>
+            <span data-ty="input" data-ty-prompt="~/dev/site # ">python</span>
+            <span data-ty>Python 3.7.6 (default, Jan  8 2020, 13:42:34)</span>
+            <span data-ty="input" data-ty-prompt=">>> ">import skills</span>
+            <span data-ty="input" data-ty-prompt=">>> ">for skill in skills:</span>
+            <span data-ty="input" data-ty-prompt="... ">&nbsp;&nbsp;&nbsp;&nbsp;print(skill)</span>
+            <span data-ty>Data science</span>
+            <span data-ty>Machine learning</span>
+            <span data-ty>Data engineering and architecture</span>
+            <span data-ty>Rapid prototyping and innovation</span>
+            <span data-ty>DevOps</span>
+            <span data-ty>AWS</span>
+            <span data-ty="input" data-ty-prompt=">>> ">exit()</span>
+            <!-- <span data-ty="input" data-ty-prompt="~/dev/site # ">echo $EMAIL</span> -->
+        </div>
+
+        <!-- include and initialise termynal.js -->
+        <script src="termynal.js" data-termynal-container="#termynal"></script>
+    </body>
+</html>
